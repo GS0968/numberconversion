@@ -3,8 +3,7 @@ def convert(s):
     hexstring=""
     remainder=[]
     quotient= int(int(s)/16)
-    remaindervalue=int(s)%16
-    remainder.append(remaindervalue)
+    remainder.append(int(s)%16)
     while quotient!=0:
         remaindervalue=quotient%16
         quotient=int(quotient/16)
@@ -15,5 +14,3 @@ def convert(s):
         remaindervalue=int(remainder[length])
         hexstring=hexstring+hexlist[remaindervalue]
     return hexstring
-if __name__=="__main__":
-    convert()
